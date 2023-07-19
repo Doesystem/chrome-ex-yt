@@ -1,0 +1,28 @@
+.container {
+    width:700px;
+    margin:auto;
+    border-bottom: 1px dashed #CCC;
+    padding-top: 10px;
+    padding-bottom: 15px;
+}
+
+.header {
+    border-bottom: 1px solid #CCC;
+}
+
+#api-to-call {
+    width: 100%;
+}
+
+.submit {
+    text-align: right;
+    padding-top: 10px;
+}
+
+.submit input {
+    padding: 5px;
+}
+
+.title-content {
+    font-weight: bold;
+}

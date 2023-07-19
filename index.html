@@ -1,5 +1,22 @@
 <html>
+    <head>
+        <link rel="stylesheet" href="style/global.css">
+        <script src="script/index.js"></script>
+    </head>
     <body>
-        <h1>Hello World !!!</h1>
+        <div class="container">
+            <span class="title-content">Page URL:</span> <span id="urlDisplay"></span><br />
+            <span class="title-content">Is Youtube:</span> <span id="isYoutube"></span><br />
+            <span class="title-content">Youtube Id:</span> <span class="youtubeId"></span><br />
+        </div>
+        <div class="container">
+            <h1 class="header">Youtube Extension Tools</h1>
+            <div>API URL</div>
+            <input id="api-to-call" type="text" name="apiendpoint" />
+            <span class="title-content">Youtube Id:</span> <span class="youtubeId"></span><br />
+            <div class="submit">
+                <input type="submit" value="Submit" />
+            </div>
+        </div>
     </body>
 </html>

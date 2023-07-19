@@ -22,6 +22,10 @@
         "64": "img/icon64.png"
     },
 
+    "permissions": [
+        "tabs"
+    ],
+
     // Optional
     "author": "https://github.com/Doesystem/chrome-ex-yt"
 }
