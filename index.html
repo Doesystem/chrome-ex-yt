@@ -4,18 +4,20 @@
         <script src="script/index.js"></script>
     </head>
     <body>
+        <h1 class="header">Youtube Extension Tools</h1>
         <div class="container">
             <span class="title-content">Page URL:</span> <span id="urlDisplay"></span><br />
             <span class="title-content">Is Youtube:</span> <span id="isYoutube"></span><br />
             <span class="title-content">Youtube Id:</span> <span class="youtubeId"></span><br />
         </div>
-        <div class="container">
-            <h1 class="header">Youtube Extension Tools</h1>
+        <div class="container box-tools">
+            <div class="title-content">Submit Youtube ID to API</div>
+            <br />
             <div>API URL</div>
             <input id="api-to-call" type="text" name="apiendpoint" />
             <span class="title-content">Youtube Id:</span> <span class="youtubeId"></span><br />
             <div class="submit">
-                <input type="submit" value="Submit" />
+                <input type="submit" value="Submit" id="submit-form" />
             </div>
         </div>
     </body>

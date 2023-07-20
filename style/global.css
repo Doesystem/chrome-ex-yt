@@ -1,7 +1,6 @@
 .container {
     width:700px;
     margin:auto;
-    border-bottom: 1px dashed #CCC;
     padding-top: 10px;
     padding-bottom: 15px;
 }
@@ -25,4 +24,11 @@
 
 .title-content {
     font-weight: bold;
+}
+
+.box-tools {
+    border: 1px solid #CCC;
+    padding: 10px;
+    border-radius: 15px;
+    box-shadow: 2px 2px 2px #888888;
 }
