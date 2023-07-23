@@ -17,9 +17,12 @@ chrome.tabs.query({ active: true, currentWindow: true }, function (tabs) {
         youtubeIds[i].textContent = id
     }
 
+    const submit = document.getElementById('submit-form')
     if(!id){
-        const submit = document.getElementById('submit-form')
         submit.disabled = true;
+    }
+    else {
+        submit.addEventListener("click", submitForm);
     }
 
     const apiendpointEle = document.getElementById('api-to-call');
@@ -57,4 +60,37 @@ function getYouTubeIDFromURL() {
 function storeEndpoint(event) {
     const inputValue = event.target.value;
     localStorage.setItem('apiendpoint', inputValue);
+}
+
+function submitForm(event) {
+    console.log('submit...')
+
+    const submit = document.getElementById('submit-form')
+    submit.disabled = true;
+    const loader = document.getElementById('loader')
+    loader.style.display = 'block'
+    const boxTools = document.getElementsByClassName('box-tools')[0]
+    boxTools.style.opacity = '0.2'
+
+    fetch(localStorage.getItem('apiendpoint'))
+        .then(response => {
+            if(response.status == 200){
+                return response.json()
+            }
+            return null;
+        })
+        .then(data => {
+            console.log(data)
+
+            submit.disabled = false;
+            loader.style.display = 'none'
+            boxTools.style.opacity = '1'
+        })
+        .catch(error => {
+            console.error(error)
+
+            submit.disabled = false;
+            loader.style.display = 'none'
+            boxTools.style.opacity = '1'
+        });
 }
