@@ -72,12 +72,18 @@ function submitForm(event) {
     const boxTools = document.getElementsByClassName('box-tools')[0]
     boxTools.style.opacity = '0.2'
 
+    const statusRes = document.getElementById('status-res')
+
     fetch(localStorage.getItem('apiendpoint'))
         .then(response => {
             if(response.status == 200){
+                statusRes.innerHTML = 'status ' + response.status + ' in ' + new Date().getTime()
                 return response.json()
             }
-            return null;
+            else {
+                statusRes.innerHTML = 'status ' + response.status + ' in ' + new Date().getTime()
+                return null;
+            }
         })
         .then(data => {
             console.log(data)
