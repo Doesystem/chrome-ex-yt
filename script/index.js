@@ -74,7 +74,7 @@ function submitForm(event) {
 
     const statusRes = document.getElementById('status-res')
 
-    fetch(localStorage.getItem('apiendpoint'))
+    fetch(localStorage.getItem('apiendpoint') + id)
         .then(response => {
             if(response.status == 200){
                 statusRes.innerHTML = 'status ' + response.status + ' in ' + new Date().getTime()
